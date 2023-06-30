@@ -37,8 +37,9 @@ function Post({user, postImage, likes, timestamp, comment}) {
             </div>
             Liked by {likes} people.
             <br />
-            {user}: {comment}
-            <div class="horizontal-line"></div>
+            <br />
+            <span className='username__comment'>{user} </span><span>{comment}</span>
+            <div className="horizontal-line"></div>
         </div>
     </div>
   )

@@ -56,7 +56,15 @@
 }
 
 .avatar {
-
     margin-right: 10px;
 }
 
+.info {
+    font-size: 12px;
+    color: grey;
+}
+
+.copyright {
+    font-size: 14px;
+    color: grey;
+}
