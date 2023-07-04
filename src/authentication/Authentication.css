@@ -43,3 +43,11 @@
 .auth__more > span > button:hover {
     cursor: pointer;
 }
+
+
+
+@media (max-width: 880px) {
+    .auth__left {
+        display: none;
+    }
+}
