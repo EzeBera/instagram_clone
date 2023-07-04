@@ -77,13 +77,11 @@
     color: grey;
 }
 
-
 @media (max-width: 880px) {
     .suggestions {
         display: none;
     }
 }
-
 
 @media (max-width: 1300px) {
     .suggestions {

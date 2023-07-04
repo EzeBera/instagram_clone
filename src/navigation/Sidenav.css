@@ -99,12 +99,10 @@
     }
 }
 
-
-
 @media (max-width: 800px) {
     .sidenav__logo {
         display: none;
-}
+    }
 
     .sidenav__buttons {
         background-color: black;

@@ -21,7 +21,6 @@ function Signup() {
       handleSignup();
     }
   };
-
   
 
   return (
