@@ -21,6 +21,10 @@
     align-items: center;
     font-weight: bolder;
 }
+.post__headerAuthor:hover {
+    cursor: pointer;
+}
+
 
 .post__headerAuthor > span {
     color: grey;
@@ -67,4 +71,22 @@
 .username__comment {
     font-weight: bold;
     
+}
+
+.moreIcon {
+    cursor: pointer;
+}
+
+@media (max-width: 1300px){
+    .post {
+        width: 450px;
+        margin: 30px 40px 50px 5px;
+    }
+}
+
+@media (max-width: 800px){
+    .post {
+        width: 300px;
+        margin: 30px 50px 50px 50px;
+    }
 }

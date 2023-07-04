@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import './Timeline.css'
-import Suggestions from './Suggestions'
-import Post from './posts/Post'
-import { Avatar } from '@mui/material'
-
+import React, { useState, useRef } from 'react';
+import './Timeline.css';
+import Suggestions from './Suggestions';
+import Post from './posts/Post';
+import { Avatar } from '@mui/material';
 
 function Timeline() {
+  const avatarsContainerRef = useRef(null);
   const [posts, setPosts] = useState([
     {
       user: "Clio",
@@ -50,11 +50,30 @@ function Timeline() {
       comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad nihil commodi, quaerat quod labore provident impedit accusamus debitis fugit aliquid aliquam iure ipsum consectetur, vero, sed ipsam eveniet distinctio!"
     }
   ]);
+
+  const avatars = [];
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+  for (let i = 0; i <letters.length; i++) {
+    const letter = letters[i % letters.length];
+    avatars.push(<Avatar key={i} className="avatar2">{letter}</Avatar>);
+  }
+
+  const scrollAvatars = (direction) => {
+    const container = avatarsContainerRef.current;
+    if (container) {
+      const scrollAmount = direction === 'left' ? -100 : 100;
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className='timeline'>
       <div className="timeline__left">
         <div className="timeline__posts">
-        <Avatar>D</Avatar>
+          <div className='avatar__superior' ref={avatarsContainerRef}>
+            {avatars}
+          </div>
           {posts.map((post) => {
             return (
               <Post
@@ -72,7 +91,16 @@ function Timeline() {
         <Suggestions />
       </div>
     </div>
-  )
+  );
 }
 
-export default Timeline
+export default Timeline;
+
+
+
+
+
+
+
+
+

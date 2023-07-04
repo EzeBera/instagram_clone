@@ -54,9 +54,17 @@
     font-weight: 600;
     font-size: 14px;
 }
+.username:hover {
+    cursor: pointer;
+    color: grey;
+}
 
 .avatar {
     margin-right: 10px;
+}
+
+.avatar:hover {
+    cursor: pointer;
 }
 
 .info {
@@ -67,4 +75,42 @@
 .copyright {
     font-size: 14px;
     color: grey;
+}
+
+
+@media (max-width: 880px) {
+    .suggestions {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .suggestions {
+        margin-top: 25px;
+    }
+
+    .suggestions__username {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .username {
+        font-size: 12px;
+    }
+
+    .info {
+        font-size: 10px;
+    }
+
+    .copyright{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px){
+    .suggestions {
+        display: none;
+    }
 }

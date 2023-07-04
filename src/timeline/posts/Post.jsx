@@ -16,7 +16,7 @@ function Post({user, postImage, likes, timestamp, comment}) {
             <Avatar>{user.charAt(0).toUpperCase()}</Avatar>
             &#160;&#160;{user}&#160;•&#160;<span>{timestamp}</span>
             </div>
-            <MoreHorizIcon/>
+            <MoreHorizIcon className='moreIcon'/>
         </div>
         <div className="post__image">
             <img 

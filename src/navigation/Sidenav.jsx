@@ -30,6 +30,9 @@ function Sidenav() {
       src="https://www.pngkey.com/png/full/828-8286178_mackeys-work-needs-no-elaborate-presentation-or-distracting.png" 
       alt="Instagram logo" 
       />
+      {/* <button className='notification__responsive'>
+        <FavoriteBorderIcon />
+      </button> */}
       <div className="sidenav__buttons">
         <button className="sidenav__button">
         <HomeIcon />
@@ -56,7 +59,7 @@ function Sidenav() {
         <span>Messages</span>
         </button>
 
-        <button className="sidenav__button">
+        <button className={`sidenav__button ${window.innerWidth <= 800 ? 'hide-search' : ''}`}>
         <FavoriteBorderIcon />
         <span>Notifications</span>
         </button>
@@ -66,7 +69,7 @@ function Sidenav() {
         <span>Create</span>
         </button>
 
-        <button className="sidenav__button">
+        <button className="sidenav__button" onClick={handleLogout}>
         <Avatar>
           {user.email ? user.email.charAt(0).toUpperCase() : " "}
         </Avatar>
@@ -83,7 +86,7 @@ function Sidenav() {
 
       <div className="vertical-line"></div>
       <div className="sidenav__more">
-        <button className="sidenav__button">
+        <button className={`sidenav__button ${window.innerWidth <= 800 ? 'hide-button' : ''}`}>
         <MenuIcon />
         <span>More</span>
         </button>
