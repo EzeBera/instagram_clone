@@ -9,7 +9,7 @@ The creation and use of users works through firebase auth
 ![front1](https://github.com/D3R5/instagram-clone-react/assets/117954097/94b2b5d9-7de6-4b7b-ae45-d34e4215c0c6)
 
 ## User Profile - Smartphone
-![front1](https://github.com/D3R5/instagram-clone-react/assets/117954097/96b06279-287c-4ea4-aa5a-bbc5f25f2310)
+![front2](https://github.com/D3R5/instagram-clone-react/assets/117954097/9f62d931-a0f3-4617-9727-6e9357ace63a)
 
 
 # Available Scripts
